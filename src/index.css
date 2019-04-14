@@ -1,0 +1,105 @@
+:root {
+  --theme-default-background: #fff;
+  --theme-default-color: #000;
+  --dark-theme-background: #000;
+  --dark-theme-color: #fff;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body.dark {
+  color: var(--dark-theme-color);
+  background-color: var(--dark-theme-background);
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+
+.gif-header {
+  position: sticky;
+  top: 0;
+  background: #fff;
+  z-index: 999;
+  padding-bottom: 20px;
+  padding-top: 10px;
+  margin: 0 2em;
+}
+
+.gif-header .menu {
+  box-shadow: none;
+  border: none;
+}
+
+.gif-header a {
+  text-decoration: none;
+}
+
+.dark .gif-header, .dark .ui.menu {
+  color: var(--dark-theme-color);
+  background-color: var(--dark-theme-background);
+}
+
+.dark .ui.toggle.checkbox input:checked~.box, .dark .ui.toggle.checkbox input:checked~label, 
+.dark .ui.toggle.checkbox .box, .dark .ui.toggle.checkbox label,
+.dark .ui.checkbox .box:before, .ui.checkbox label:before {
+  color: var(--dark-theme-color) !important;
+}
+
+.gif-search {
+  width: 70%;
+}
+
+#search-field {
+  width: 100%;
+}
+
+.gif-grid {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 2em;
+}
+
+.gif-container {
+  margin: 1em;
+}
+
+.gif-view {
+  margin-top: 10px;
+}
+
+.gif-view h3.header {
+  text-align: center;
+}
+
+.gif-container img.loading {
+  display: none;
+}
+
+.gif-container .ui.card, .gif-container .ui.placeholder {
+  height: 14em;
+  width: 14em;
+}
+
+@media all and (max-width: 395px) {
+  .gif-container .ui.card, .gif-container .ui.placeholder {
+    height: 100%;
+    width: 100%;
+  } 
+}
+
+@media all and (min-width: 400px) and (max-width: 1024px) {
+  .gif-container .ui.card, .gif-container .ui.placeholder {
+    height: 20em;
+    width: 20em;
+  } 
+}
